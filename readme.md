@@ -15,14 +15,14 @@ The *first version* lets you add a total (the sum of every individual order), a 
 On a future version I intend to add a detailed view of the order, so that you can add while you order and don't have to wait for the check to come to calculate how much each of you have to pay. This is not very useful within the app, but will let me learn a bit more about some other Android specifics.
 
 ###Current desired features
-[ ] Check creation
-[ ] Add quantity of diners
-[ ] Add tip specifics (percentage or amount)
-[ ] Show amount to pay per diner with and without tip
-[ ] Just one check at a time
-[ ] The check is persisted until a new one is created
+- [ ] Check creation
+- [ ] Add quantity of diners
+- [ ] Add tip specifics (percentage or amount)
+- [ ] Show amount to pay per diner with and without tip
+- [ ] Just one check at a time
+- [ ] The check is persisted until a new one is created
 
 
 ###Future features
-[ ] Ability to persist different checks (to compare prices of the same place in different moments, maybe?)
-[ ] Add individual order to check
+- [ ] Ability to persist different checks (to compare prices of the same place in different moments, maybe?)
+- [ ] Add individual order to check
