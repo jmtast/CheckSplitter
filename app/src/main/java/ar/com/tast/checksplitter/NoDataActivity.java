@@ -1,6 +1,7 @@
 package ar.com.tast.checksplitter;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.design.widget.FloatingActionButton;
@@ -17,6 +18,7 @@ import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class NoDataActivity extends AppCompatActivity {
+    RadioButton selected;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +49,11 @@ public class NoDataActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Integer selectedDetail = detailOptions.getCheckedRadioButtonId();
-                        RadioButton selected = (RadioButton) detailOptions.findViewById(selectedDetail);
+                        selected = (RadioButton) detailOptions.findViewById(selectedDetail);
                         Toast.makeText(getApplicationContext(), selected.getText(), Toast.LENGTH_SHORT).show();
-                        checkDetailChooserDialog.dismiss();
+                        Intent totalPriceCalculatorIntent = new Intent(NoDataActivity.this, TotalPriceCalculatorActivity.class);
+                        totalPriceCalculatorIntent.putExtra("SELECTED_RADIO_BUTTON", selectedDetail.toString());
+                        startActivity(totalPriceCalculatorIntent);
                     }
                 });
 
